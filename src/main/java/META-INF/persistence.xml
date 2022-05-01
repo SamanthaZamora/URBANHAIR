@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="URBANSS">
+	<class>co.urbanhair.entities.AtencionServicio</class>
+		<class>co.urbanhair.entities.Cita</class>
+		<class>co.urbanhair.entities.Empleado</class>
+		<class>co.urbanhair.entities.InformacionEmpresarial</class>
+		<class>co.urbanhair.entities.Nomina</class>
+		<class>co.urbanhair.entities.Persona</class>
+		<class>co.urbanhair.entities.Producto</class>
+		<class>co.urbanhair.entities.Proveedor</class>
+		<class>co.urbanhair.entities.Reporte</class>
+		<class>co.urbanhair.entities.Rol</class>
+		<class>co.urbanhair.entities.Servicio</class>
+		<class>co.urbanhair.entities.TipoDocumento</class>
+		<class>co.urbanhair.entities.TipoEmpleado</class>
+		<class>co.urbanhair.entities.Promociones</class>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://urbanhairbd.cxs5qfvfa6s9.us-east-2.rds.amazonaws.com:3306/urbanhairbd" />
+
+			<property name="javax.persistence.jdbc.user" value="root" />
+
+			<property name="javax.persistence.jdbc.password" value="samanthazamora" />
+
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MariaDB53Dialect" />
+
+		</properties>
+	</persistence-unit>
+</persistence>

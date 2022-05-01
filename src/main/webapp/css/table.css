@@ -1,0 +1,62 @@
+.home-section{
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+.home-section .title{
+  display: flex;
+  margin: 18px;
+  padding: 20px 10px 20px 10px;
+  width: 98%;
+}
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+
+.titulo h1{
+  color: #000000;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 20px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.table-style{
+  margin: 10px;
+  padding: 10px;
+  width: 98%;
+  border-radius: 5px;
+}
+
+th.enc{
+  text-align: center;
+}
+
+td{
+  font-size: 15px;
+}
+
+.boton{
+  margin-right: 15px;
+  float: right !important;
+  margin-top: 20px;
+  padding-left: 15px;
+}
+
+.btn{
+  background: #22A7DF ;
+  font-size: 17px !important;
+}

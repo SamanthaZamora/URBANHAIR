@@ -1,0 +1,613 @@
+:root {
+    --fuenteHeading: 'Pt Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --gris: #e1e1e1; 
+    --blanco: #ffff;
+    --negro: #000000;
+    --lila : #dda1df;
+    --verde: #8BC34A;
+    --grisoscuro: #333333;
+
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/**Globales**/
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+/* .header-decoracion  {
+    text-decoration: none;    
+} */
+
+.header-decoracion  :hover {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.alert-login{
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: auto;
+	max-width: 200px;
+	
+	min-height: 50px;
+	height: auto;
+	overflow: hidden;
+	border-radius: 7px;
+	
+	background-color: rgba(255, 64, 64, 0.7);
+	color: #fff;
+
+	
+}
+
+.alert-login > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 12px;
+	width: 100%;
+	height: 100%;
+}
+
+.alert-login .alert-login-close{
+	
+	position: absolute;
+	top: 5px;
+	right:5px;
+	color: white;
+	border-radius: 50%;
+	 text-align: center;
+	width: 30px;
+	height: 30px;
+	border: 1px solid white;
+	cursor: pointer;
+	
+}
+
+
+.alert-login .alert-login-message{
+	padding-top: 40px;
+	display: block;
+	text-align: center;
+	
+}
+
+
+
+a{
+    text-decoration: none;
+    
+}
+
+h1,h2,h3,h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+}
+
+/**Utilidades**/
+.no-margin{
+    margin: 0;
+}
+.no-pading{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+/**HEADER*/
+.webp .header{
+    background-image: url(../img/imagen1.jpg);
+}
+.no-webp {
+    background-image: url(../img/imagen1.jpg);
+}
+.header {
+    background-image: url(../img/imagen1.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header-nosotros {
+    background-color: var(--grisoscuro);
+    height: 12rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header-servicios {
+    background-image: url(../img/descarga.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header-usuario {
+    background-color: #B39FB4;
+    height: 12rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 3rem;
+}
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top: 15rem;
+    }
+}
+.barra{
+    padding-top: 4rem;
+}
+@media (min-width: 768px) {
+    .barra {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+    .logo {
+        color: var(--blanco);
+    }
+    .logo__nombre{
+        font-weight: 400;
+    }
+    .logo__bold{
+        font-weight: 700;
+    }
+
+    /* Navegación*/
+    
+    @media (min-width: 768px) {
+        .navegacion{
+           display: flex;
+            gap: 2rem;
+        }
+    }
+    .navegacion__enlaces{
+        display: block;
+        text-align: center;
+        font-size: 1.8rem;
+        color: var(--blanco);
+    }
+
+    /*Contenido Principal*/
+
+    @media (min-width: 768px) {
+        .contenido-principal {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 4rem;
+            margin-top: 6rem;
+            
+    }
+}
+
+.contenido-principal img {
+    height:45rem; 
+    border-radius: 2rem;
+    margin-left: 7rem;
+    
+}
+
+.nosotros h1 {
+    font-weight: 700;
+    padding-bottom: 1rem;
+    color: var(--lila);
+} 
+.nosotros hr {
+    
+    border-top: 2px solid   var(--lila);
+    border-radius: 2px;
+}
+
+
+
+    /*Contenido SERVICIOS*/
+
+.contenido-servicios {
+    
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f3eaf9+0,eda0ef+50,f29dec+51,ff7cd8+100 */
+    width: 100%;    
+}
+
+.nuestros-servicios{
+    margin-top: 5rem;
+}
+
+
+.nuestros-servicios hr {
+    padding-bottom: 2rem;
+    border-top: 2px solid  var(--verde);
+    border-radius: 2px;
+    width: 50rem;
+    margin-left: 45rem;
+}
+
+.nuestros-servicios img {
+    width: 30rem;
+    height: 30rem;
+}
+
+.nuestros-servicios p, h5 {
+    font-family: var(--fuenteHeading);
+    color: var(--negro);
+    
+}
+
+.nuestros-servicios h4 {
+    font-family: var(--fuenteHeading);
+    color: var(--verde);
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+    
+}
+
+.nuestros-servicios-col {
+    background-color: #F5F2F2;
+    
+    
+}
+
+.nuestros-servicios-col img {
+    width: 30%;
+    height: 40%;
+    
+    
+}
+
+
+.row-serv, .row {    
+    margin: 0;
+}
+
+
+.testimonio-img {
+    position: absolute; 
+    left: 40px; 
+    top: 40px; 
+    width: 40rem; 
+    height: 50rem; 
+    margin-left: 20rem;
+}
+
+.testimonio-frase {
+    position: absolute; 
+    left: 80px; 
+    top: 90px; 
+    background-color: #F5F2F2; 
+    width: 40rem; 
+    height: 20rem; 
+    margin-left: 50rem; 
+    margin-top: 7rem;
+    padding: 2rem;
+    
+}
+
+
+/*Boton*/
+.boton {
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--lila);
+    text-align: center;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: none;
+    
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display:inline-block;
+    }
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+.boton--primario {
+    background-color: var(--negro);
+}
+
+.boton--secundario {
+    background-color: var(--primario);
+}
+
+
+/*Sobre Nosotros*/
+
+.nosotros-colum-1 {
+    padding-left: 0;   
+}
+.nosotros-colum-2 {
+    padding: 4rem;
+}
+
+.testimonios h2 {
+    color: var(--verde);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.testimonios img {
+    border-radius:50%; 
+    width:auto; 
+    height: 50%; 
+    
+}
+
+.testimonio {
+    padding: 8rem;
+}
+
+
+/*Productos*/
+
+.nuestros-productos-col {
+    background-color: #dfc2e0;
+    width: auto;
+    padding: 2rem;
+    
+}
+
+.nuestros-productos-col h4 {
+    
+    color: var(--blanco);
+    
+}
+
+
+/*Contacto*/
+
+
+.contacto-principal h2 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contacto-principal p {
+    text-align: center;
+    margin: 4rem;
+}
+
+.contacto-principal img {
+    height:37rem; 
+    width: 40rem;
+    border-radius: 2rem;
+    margin-left: 5rem;
+    
+}
+
+.contacto-colum-1{
+    padding: 3rem;
+}
+
+/*Formulario Contacto*/
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%); 
+    margin: 1rem auto; 
+    padding: 4rem;
+    border-radius: 2rem;
+    opacity: 0.8;
+    height: 95%;
+    
+
+    
+}
+
+.formulario fieldset {
+    border: none;
+    margin-right: 3rem;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+
+}
+
+
+.campo {
+    margin-bottom: 1rem;
+    
+}
+
+.campo label {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 200px;
+    background-color: #f7f7f7;
+}
+
+.campo input {
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    background-color: #f7f7f7;
+    
+    
+}
+
+.campoinput input {
+    width: 100% !important ;
+}
+
+.input-text {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    border-style: solid; 
+}
+
+.boton-contacto {
+    color: var(--blanco);
+    background-color: var(--negro);
+    width: auto;
+    margin-left: 20rem;
+}
+
+
+
+
+/*Registro*/
+
+.contenido-regitro {
+    background-image: url(../img/1.jpg);
+    margin-bottom: 0;
+    
+}
+
+.formulario legend {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: var(--fuenteHeading);
+}
+
+.btn-registro {
+    width: auto;
+    
+}
+
+
+/*Login*/
+.formulario-login {
+    width: 40%;
+    height: 60rem;
+
+}
+.btn-login {
+    width: 40%;
+    margin-left: 0% ;
+    margin-left: 15rem;
+}
+
+.btn-agendar a {
+    background-color: #B39FB4;
+    padding: 1rem;
+    color: var(--blanco);
+}
+
+.btn-agendar :hover {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.login-p p {
+    color: var(--negro);
+    margin: 0;
+    
+}
+.no p{
+	text-decoration: none;
+}
+
+
+/*USUARIOS datos personales*/
+
+.usuario-datos :hover a {
+    color: var(--negro) !important; 
+}
+
+
+
+.selector {
+    border-left:   solid #B39FB4;
+}
+
+/*Footer*/
+.footer {
+    background-color: var(--grisoscuro);
+    padding-bottom: 3rem;
+    margin-top: 0rem;
+}
+
+.footer-registro {   
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+    
+}
+
+.noponer :hover  {
+    text-decoration: none;
+    color: var(--negro) !important;
+    
+}
+
+.usuario-datos svg {
+    margin-left: 3rem;
+}
+
+.a-cancelar a {
+    text-decoration: none; 
+    color: rgb(184, 57, 57); 
+    font-weight: bold;
+}
+
+.a-cancelar :hover {
+    color: rgb(184, 57, 57); 
+}
