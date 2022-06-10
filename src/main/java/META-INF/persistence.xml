@@ -18,11 +18,11 @@
 		
 		<properties>
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://urbanhairbd.cxs5qfvfa6s9.us-east-2.rds.amazonaws.com:3306/urbanhairbd" />
+				value="jdbc:mysql://node101929-urban.jelastic.saveincloud.net:3306/urbanhairbd" />
 
 			<property name="javax.persistence.jdbc.user" value="root" />
 
-			<property name="javax.persistence.jdbc.password" value="samanthazamora" />
+			<property name="javax.persistence.jdbc.password" value="VW7GlhBhKN" />
 
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
