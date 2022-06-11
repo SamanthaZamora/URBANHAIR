@@ -195,7 +195,7 @@
 								<input type="text" class="formulario__input" name="precio"
 									placeholder="Precio por unidad"
 									pattern="[0-9-.]+" required="" 
-									minlength="3" maxlength="9"
+									minlength="3" maxlength="900000"
 									value="<c:out value='${producto.precio}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -222,7 +222,7 @@
 								<input type="text" class="formulario__input" name="cantidad"
 									placeholder="Cantidad existente"
 									pattern="[0-9]+" required="" 
-									minlength="1" maxlength="10"
+									minlength="1" maxlength="100"
 									value="<c:out value='${producto.cantidad}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
