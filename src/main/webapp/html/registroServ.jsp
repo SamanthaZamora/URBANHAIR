@@ -177,7 +177,7 @@
                 del servicio</label>
               <div class="formulario__grupo-input">
                 <input type="text" class="formulario__input" name="precio"
-                  placeholder="Sin puntos ni comas"
+                  placeholder="Sin puntos ni comas" required
                   pattern="[0-9-.]+" required minlength="5" maxlength="900000"
                   value="<c:out value='${servicio.precio}' />"> <i
                   class="formulario__validacion-estado fas fa-times-circle"></i>
@@ -205,7 +205,7 @@
                 <div class="formulario__grupo-input">
                   <input type="time" class="formulario__input" name="duracion"
                     placeholder="Duración total del servicio"
-                    pattern="[0-9]+" required min="00:00"  max="04:00" reuqired
+                    pattern="[0-9]+" required min="00:00"  max="04:00" 
                     value="<c:out value='${servicio.duracion}' />"> <i
                     class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>

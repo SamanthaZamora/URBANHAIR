@@ -158,6 +158,8 @@
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="nombre"
 									placeholder="Nombre de la promoción"
+									pattern="[a-zA-ZÀ-ÿ- \s]+" required
+				  					minlength="3" maxlength="100"
 									value="<c:out value='${promociones.nombre}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -168,9 +170,11 @@
 							</label>
 							<div class="formulario__grupo-input">
 								<div class="form-floating ">
-									<textarea class="form-control" name="descripcion"
-										placeholder="Descripción de la promoción"
-										style="height: 100px"><c:out value='${promociones.descripcion}' /></textarea>
+									<input class="form-control" name="descripcion"
+					                    placeholder="Descripción del producto"
+					                    pattern="[a-zA-ZÀ-ÿ- \s]+" required
+										minlength="6" maxlength="60"
+										style="height: 90px"><c:out value='${promociones.descripcion}' /></input>
 									<i class="formulario__validacion-estado fas fa-times-circle"></i>
 								</div>
 							</div>
@@ -181,8 +185,8 @@
 							<label  class="formulario__label">Imagen </label>
 							<div class="">
 								<div class="form-floating ">
-									<textarea class="form-control" name="imgURL"
-										style="height: 100px"><c:out value='${promociones.imgURL}' /></textarea>
+									<input class="form-control" name="imgURL" type="url" required
+										style="height: 100px"><c:out value='${promociones.imgURL}' /></input>
 								</div>
 							</div>
 						</div>
@@ -199,6 +203,7 @@
 								Inicio</label>
 							<div class="formulario__grupo-input">
 								<input type="date"  name="fechaInicio" class="formulario__input"
+									min="2022-01-01" max="2022-12-12" required 
 									placeholder="Inicio de la promociï¿½n" value="<c:out value='${promociones.fechaInicio}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -208,6 +213,7 @@
 								Fin</label>
 							<div class="formulario__grupo-input">
 								<input type="date" name="fechaFin" class="formulario__input"
+									min="2022-01-01" max="2022-12-12" required
 									placeholder="Fin de la promociï¿½n" value="<c:out value='${promociones.fechaFin}' />"><i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -217,7 +223,8 @@
 							<label class="formulario__label">Precio</label>
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="precio"
-									placeholder="Precio de la promoción"
+									placeholder="Sin puntos ni comas" required
+									pattern="[0-9-.]+" required minlength="5" maxlength="900000"
 									value="<c:out value='${promociones.precio}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -227,7 +234,7 @@
 							<label for="nombre" class="formulario__label">Tipo de rol </label>
 							<select class="form-select" aria-label=".form-select-sm example"
 								name="idR">
-								<option selected>Tipo de cargo</option>
+								<option disabled>Tipo de cargo</option>
 								<c:forEach var="tiporol" items="${listaRol}">
 									<option value="${tiporol.idRol}">${tiporol.rol}</option>
 								</c:forEach>
