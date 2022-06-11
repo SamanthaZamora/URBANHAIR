@@ -150,7 +150,7 @@
 							<label for="nombre" class="formulario__label">Tipo de
 								Documento </label> <select class="form-select"
 								aria-label=".form-select-sm example" name="idTipoD">
-								<option selected>Tipo de documento</option>
+								<option disabled >Tipo de documento</option>
 								<c:forEach var="tipodocumento" items="${listaDocumento}">
 									<option value="${tipodocumento.idTipo}">${tipodocumento.tipoDocumento}</option>
 								</c:forEach>
@@ -211,8 +211,8 @@
 						<div class="formulario__grupo">
 							<label for="nombre" class="formulario__label">Cargo del
 								empleado </label> <select class="form-select"
-								aria-label=".form-select-sm example" name="idTipoE">
-								<option selected>Tipo de cargo</option>
+								aria-label=".form-select-sm example" name="idTipoE" >
+								<option disabled>Tipo de cargo</option>
 								<c:forEach var="tipoempelado" items="${listaTipoEm}">
 									<option value="${tipoempelado.idTipoEmp}">${tipoempelado.tipo}</option>
 								</c:forEach>
@@ -223,7 +223,7 @@
 							<label for="nombre" class="formulario__label">Tipo de rol
 							</label> <select class="form-select" aria-label=".form-select-sm example"
 								name="idR">
-								<option selected>Tipo de cargo</option>
+								<option disabled>Tipo de rol</option>
 								<c:forEach var="tiporol" items="${listaRol}">
 									<option value="${tiporol.idRol}">${tiporol.rol}</option>
 								</c:forEach>

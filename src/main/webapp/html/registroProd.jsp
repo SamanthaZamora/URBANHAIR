@@ -155,6 +155,8 @@
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="nombre"
 									placeholder="Nombre del producto"
+									pattern="[a-zA-ZÀ-ÿ- \s]+" required="" 
+									minlength="6" maxlength="35"
 									value="<c:out value='${producto.nombre}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -165,9 +167,11 @@
 								del Producto</label>
 							<div class="formulario__grupo-input">
 								<div class="form-floating ">
-									<textarea class="form-control" name="descripcion"
+									<input class="form-control" name="descripcion"
 										placeholder="Descripción del producto"
-										style="height: 100px"> <c:out value='${producto.descripcion}' /></textarea>
+										pattern="[a-zA-ZÀ-ÿ- ]+" required 
+										minlength="6" maxlength="40"
+										style="height: 90px"> <c:out value='${producto.descripcion}' /></input>
 									<i class="formulario__validacion-estado fas fa-times-circle"></i>
 								</div>
 							</div>
@@ -178,6 +182,8 @@
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="marca"
 									placeholder="Marca del producto"
+									pattern="[a-zA-ZÀ-ÿ- \s]+" required="" 
+									minlength="6" maxlength="20"
 									value="<c:out value='${producto.marca}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -188,6 +194,8 @@
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="precio"
 									placeholder="Precio por unidad"
+									pattern="[0-9-.]+" required="" 
+									minlength="3" maxlength="9"
 									value="<c:out value='${producto.precio}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -199,9 +207,9 @@
 							<label for="cantidad" class="formulario__label">Imagen </label>
 							<div class="formulario__grupo-input">
 								<div class="form-floating ">
-									<textarea class="form-control" name="imgURL"
-										style="height: 70px">
-										<c:out value='${producto.imgURL}' /></textarea>
+									<input class="form-control" name="imgURL" type="url"
+										style="height: 70px" required>
+										<c:out value='${producto.imgURL}' /></input>
 								</div>
 							</div>
 						</div>
@@ -213,6 +221,8 @@
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="cantidad"
 									placeholder="Cantidad existente"
+									pattern="[0-9]+" required="" 
+									minlength="1" maxlength="10"
 									value="<c:out value='${producto.cantidad}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -223,7 +233,7 @@
 							<label for="nombre" class="formulario__label">Proveedor </label> <select
 								class="form-select" aria-label=".form-select-sm example"
 								name="idPro">
-								<option selected>Proveedor del producto</option>
+								<option disabled>Proveedor del producto</option>
 								<c:forEach var="proveedor" items="${listaProve}">
 									<option value="${proveedor.idProveedor}">${proveedor.razonSocial}</option>
 								</c:forEach>
