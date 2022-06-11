@@ -149,6 +149,8 @@
               <div class="formulario__grupo-input">
                 <input type="text" class="formulario__input" name="nombre"
                   placeholder="Servicio"
+                  pattern="[a-zA-ZÀ-ÿ- \s]+" required
+				  minlength="3" maxlength="35"
                   value="<c:out value='${servicio.nombre}' />"> <i
                   class="formulario__validacion-estado fas fa-times-circle"></i>
               </div>
@@ -159,9 +161,11 @@
                 del servicio </label>
               <div class="formulario__grupo-input">
                 <div class="form-floating ">
-                  <textarea class="form-control" name="descripcion"
+                  <input class="form-control" name="descripcion"
                     placeholder="Descripción del producto"
-                    style="height: 100px"><c:out value='${servicio.descripcion}' /></textarea>
+                    pattern="[a-zA-ZÀ-ÿ- \s]+" required
+					minlength="6" maxlength="60"
+                    style="height: 100px"><c:out value='${servicio.descripcion}' /></input>
                   <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
               </div>
@@ -173,7 +177,8 @@
                 del servicio</label>
               <div class="formulario__grupo-input">
                 <input type="text" class="formulario__input" name="precio"
-                  placeholder="Precio total del servicio"
+                  placeholder="Sin puntos ni comas"
+                  pattern="[0-9-.]+" required minlength="5" maxlength="900000"
                   value="<c:out value='${servicio.precio}' />"> <i
                   class="formulario__validacion-estado fas fa-times-circle"></i>
               </div>
@@ -187,7 +192,7 @@
                 <label for="cantidad" class="formulario__label">Imagen </label>
                 <div class="formulario__grupo-input">
                   <div class="form-floating ">
-                    <input class="form-control" name="imgURL"
+                    <input class="form-control" name="imgURL" type="url" required
                       value="<c:out value='${servicio.imgURL}' />"
                       style="height: 70px"></input>
                   </div>
@@ -198,8 +203,9 @@
                 <label for="nombre" class="formulario__label">Duración
                   del servicio</label>
                 <div class="formulario__grupo-input">
-                  <input type="text" class="formulario__input" name="duracion"
+                  <input type="time" class="formulario__input" name="duracion"
                     placeholder="Duración total del servicio"
+                    pattern="[0-9]+" required min="00:00"  max="04:00" reuqired
                     value="<c:out value='${servicio.duracion}' />"> <i
                     class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
