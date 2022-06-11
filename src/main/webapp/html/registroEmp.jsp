@@ -37,84 +37,67 @@
 <body>
 
 	<!-- NAV GRIS -->
-	 <div class="sidebar"> 
-      <div class="logo-details">
-        <i class="fas fa-tire icon"></i>
-        <!-- Espacio entre mensaje Bienvenido-->
-        <div class="logo_name">Urban<strong>Hair</strong> </div>
-        <i class='bx bx-menu' id="btn"></i>
-      </div>
-    
-      <ul class="nav-list">
-        <li>
-          <div class="image-admin">
-            <div class="container-img">
-              <img src="img/login_icon.png" alt="Administrador">
-            </div>
-            <div class="container-name">
-              <p><span class="links_name">Administrador</span></p>
-            </div>
-          </div>
-        </li>
-    
-        <li>
-          <a href="<%=request.getContextPath()%>/ServletInfo?action=list">
-            <i class="fas fa-folder-open"></i>
-            <span class="links_name">Información Empresarial</span>
-          </a>
-          <span class="tooltip">Información Empresarial</span>
-        </li>
-         <li>
-          <a href="<%=request.getContextPath()%>/ServletCliente?action=list">
-            <i class="fas fa-user-check"></i>
-            <span class="links_name">Clientes</span>
-          </a>
-          <span class="tooltip">Clientes</span>
-        </li>
-        <li>
-        <li>
-          <a href="<%=request.getContextPath()%>/ServletEmpleado?action=list">
-            <i class="fas fa-user-lock"></i>
-            <span class="links_name">Empleados</span>
-          </a>
-          <span class="tooltip">Empleados</span>
-        </li>
-        <li>
-          <a href="<%=request.getContextPath()%>/ServletProductos?action=list">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="links_name">Productos</span>
-          </a>
-          <span class="tooltip">Productos</span>
-        </li>
-        <li>
-          <a href="<%=request.getContextPath()%>/ServletProveedor?action=list"">
-            <i class="fas fa-user-cog"></i>
-            <span class="links_name">Proveedores</span>
-          </a>
-          <span class="tooltip">Proveedores</span>
-        </li>
-        <li>
-          <a href="<%=request.getContextPath()%>/ServletServicio?action=list">
-            <i class="fas fa-hand-holding-usd"></i>
-            <span class="links_name">Servicios</span>
-          </a>
-          <span class="tooltip">Servicios</span>
-        </li>
-        <li>
-          <a href="<%=request.getContextPath()%>/ServletPromo?action=list">
-            <i class="fas fa-tags"></i>
-            <span class="links_name">Promociones y Paquetes</span>
-          </a>
-          <span class="tooltip">Promociones y Paquetes</span>
-        </li>
-		<li class="profile" >
-			<a href="<%=request.getContextPath()%>/Close" method="post"> 
-				<i class='bx bx-log-out'></i>
-					<span class="links_name">Salir</span>
-			</a>
-		</li>
+	<div class="sidebar">
+		<div class="logo-details">
+			<i class="fas fa-tire icon"></i>
+			<!-- Espacio entre mensaje Bienvenido-->
+			<div class="logo_name">
+				Urban<strong>Hair</strong>
+			</div>
+			<i class='bx bx-menu' id="btn"></i>
+		</div>
+
+		<ul class="nav-list">
+			<li>
+				<div class="image-admin">
+					<div class="container-img">
+						<img src="img/login_icon.png" alt="Administrador">
+					</div>
+					<div class="container-name">
+						<p>
+							<span class="links_name">Administrador</span>
+						</p>
+					</div>
+				</div>
+			</li>
+
+			<li><a
+				href="<%=request.getContextPath()%>/ServletInfo?action=list"> <i
+					class="fas fa-folder-open"></i> <span class="links_name">Información
+						Empresarial</span>
+			</a> <span class="tooltip">Información Empresarial</span></li>
+			<li><a
+				href="<%=request.getContextPath()%>/ServletCliente?action=list">
+					<i class="fas fa-user-check"></i> <span class="links_name">Clientes</span>
+			</a> <span class="tooltip">Clientes</span></li>
+			<li>
+			<li><a
+				href="<%=request.getContextPath()%>/ServletEmpleado?action=list">
+					<i class="fas fa-user-lock"></i> <span class="links_name">Empleados</span>
+			</a> <span class="tooltip">Empleados</span></li>
+			<li><a
+				href="<%=request.getContextPath()%>/ServletProductos?action=list">
+					<i class="fas fa-shopping-cart"></i> <span class="links_name">Productos</span>
+			</a> <span class="tooltip">Productos</span></li>
+			<li><a
+				href="<%=request.getContextPath()%>/ServletProveedor?action=list"">
+					<i class="fas fa-user-cog"></i> <span class="links_name">Proveedores</span>
+			</a> <span class="tooltip">Proveedores</span></li>
+			<li><a
+				href="<%=request.getContextPath()%>/ServletServicio?action=list">
+					<i class="fas fa-hand-holding-usd"></i> <span class="links_name">Servicios</span>
+			</a> <span class="tooltip">Servicios</span></li>
+			<li><a
+				href="<%=request.getContextPath()%>/ServletPromo?action=list"> <i
+					class="fas fa-tags"></i> <span class="links_name">Promociones
+						y Paquetes</span>
+			</a> <span class="tooltip">Promociones y Paquetes</span></li>
+			<li class="profile"><a
+				href="<%=request.getContextPath()%>/Close" method="post"> <i
+					class='bx bx-log-out'></i> <span class="links_name">Salir</span>
+			</a></li>
 		</ul>
-    </div>
+	</div>
 
 	<section class="home-section ">
 		<!-- BARRA AZUL -->
@@ -127,11 +110,13 @@
 		<main class="registro">
 			<div class="encabezado">
 				<c:if test="${empleado != null}">
-					<form class="formulario" action="ServletEmpleado?action=update" method="post">
+					<form class="formulario" action="ServletEmpleado?action=update"
+						method="post">
 				</c:if>
 
 				<c:if test="${empleado == null}">
-					<form class="formulario" action="ServletEmpleado?action=insert" method="post">
+					<form class="formulario" action="ServletEmpleado?action=insert"
+						method="post">
 				</c:if>
 
 				<caption>
@@ -148,18 +133,19 @@
 							<input type="hidden" name="idEmpleado"
 								value="<c:out value='${empleado.idEmpleado}' />" />
 						</c:if>
-		
+
 						<div class="formulario__grupo" id="grupo__nombre">
 							<label for="nombre" class="formulario__label">Nombre
 								Completo</label>
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="nombre"
-									placeholder="Nombres completos"
+									pattern="[a-zA-ZÀ-ÿ- \s]+" required=""
+									placeholder="Nombre completo" minlength="8" maxlength="35"
 									value="<c:out value='${empleado.nombre}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
 						</div>
-		
+
 						<div class="formulario__grupo">
 							<label for="nombre" class="formulario__label">Tipo de
 								Documento </label> <select class="form-select"
@@ -170,19 +156,20 @@
 								</c:forEach>
 							</select>
 						</div>
-		
+
 						<div class="formulario__grupo">
 							<label for="documento" class="formulario__label">No. de
 								Documento</label>
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="documento"
 									placeholder="Número de identificación"
+									pattern="[0-9]+" required="" minlength="8" maxlength="10"
 									value="<c:out value='${empleado.documento}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
 						</div>
-		
-		
+
+
 						<div class="formulario__grupo">
 							<label for="correo" class="formulario__label">Correo
 								Electronico</label>
@@ -197,29 +184,30 @@
 					</div>
 
 					<div class="col-12  col-sm-12 col-md-6 col-lg-6">
-						
+
 						<div class="formulario__grupo" id="grupo__telefono">
 							<label for="telefono" class="formulario__label">Teléfono</label>
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="telefono"
-									placeholder="Número de teléfono celular"
-									value="<c:out value='${empleado.telefono}' />"> <i
-									class="formulario__validacion-estado fas fa-times-circle"></i>
+									placeholder="Número de teléfono celular" 
+									pattern="[0-9]+" required="" minlength="10" maxlength="10"
+									value="<c:out value='${empleado.telefono}' />">
+								<i class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
 						</div>
-		
-		
+
+
 						<div class="formulario__grupo" id="grupo__telefono">
 							<label for="telefono" class="formulario__label">Fecha de
 								Nacimiento</label>
 							<div class="formulario__grupo-input">
 								<input type="date" class="formulario__input"
-									name="fechaNacimiento"
-									value="<c:out value='${empleado.fechaNacimiento}' />"> <i
-									class="formulario__validacion-estado fas fa-times-circle"></i>
+									name="fechaNacimiento" min="1962-12-12" max="2004-12-12"
+									value="<c:out value='${empleado.fechaNacimiento}' />">
+								<i class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
 						</div>
-		
+
 						<div class="formulario__grupo">
 							<label for="nombre" class="formulario__label">Cargo del
 								empleado </label> <select class="form-select"
@@ -230,10 +218,10 @@
 								</c:forEach>
 							</select>
 						</div>
-		
+
 						<div class="formulario__grupo">
-							<label for="nombre" class="formulario__label">Tipo de rol </label>
-							<select class="form-select" aria-label=".form-select-sm example"
+							<label for="nombre" class="formulario__label">Tipo de rol
+							</label> <select class="form-select" aria-label=".form-select-sm example"
 								name="idR">
 								<option selected>Tipo de cargo</option>
 								<c:forEach var="tiporol" items="${listaRol}">
@@ -245,7 +233,7 @@
 					</div>
 				</div>
 
-			
+
 
 
 
