@@ -155,6 +155,8 @@
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="razonSocial"
 									placeholder="Nombre de la empresa"
+									pattern="[a-zA-ZÀ-ÿ- \s]+" required
+									minlength="6" maxlength="35"
 									value="<c:out value='${proveedor.razonSocial}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -164,7 +166,7 @@
 							<label for="nombre" class="formulario__label">Correo de la empresa</label>
 							<div class="formulario__grupo-input">
 								<input type="email" class="formulario__input" name="email"
-									placeholder="example23@correo.com"
+									placeholder="example23@correo.com" required
 									value="<c:out value='${proveedor.email}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -175,6 +177,8 @@
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="representanteLegal"
 									placeholder="Persona de contacto"
+									pattern="[a-zA-ZÀ-ÿ- \s]+" required
+									minlength="6" maxlength="35"
 									value="<c:out value='${proveedor.representanteLegal}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -189,6 +193,8 @@
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="direccion"
 									placeholder="Dirección de la empresa"
+									pattern="[a-zA-ZÀ-ÿ- -0-9-#--\s]+" required
+									minlength="6" maxlength="35"									
 									value="<c:out value='${proveedor.direccion}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -200,6 +206,7 @@
 							<div class="formulario__grupo-input">
 								<input type="text" class="formulario__input" name="telefono"
 									placeholder="Teléfono de la empresa"
+									pattern="[0-9]+" required minlength="10" maxlength="10"
 									value="<c:out value='${proveedor.telefono}' />"> <i
 									class="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -209,7 +216,7 @@
 						<div class="formulario__grupo" >
 							<label for="nombre" class="formulario__label">Tipo de rol </label> 
 							<select class="form-select" aria-label=".form-select-sm example" name="idR">
-								<option selected>Tipo de rol</option>
+								<option disabled>Tipo de rol</option>
 								<c:forEach var="tiporol" items="${listaRol}">
 									<option value="${tiporol.idRol}">${tiporol.rol}</option>
 								</c:forEach>
