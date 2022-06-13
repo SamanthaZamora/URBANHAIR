@@ -96,13 +96,16 @@
 						<div class="campo">
 							<label >Nombre Completo</label> <input name="nombre"
 								class="input-text" type="text" placeholder="Tu Nombre"
-								value="<c:out value='${cliente.nombre}' />" required>
+								pattern="[a-zA-ZÀ-ÿ- \s]+" required
+								minlength="6" maxlength="35"
+								value="<c:out value='${cliente.nombre}' />" >
 						</div>
 
 
 						<div class="campo">
 							<label >Fecha de Nacimiento</label> <input
 								name="fechaNacimiento" class="input-text" type="date"
+								min="1996-01-01" max="2021-12-31" required
 								placeholder="Ingresa tu fecha de nacimiento" required>
 						</div>
 
@@ -112,9 +115,9 @@
 							<c:set var="tipos" scope="session" value="${tipoDoc.list()}"></c:set>
 							<select class=" input-text"
 							aria-label=".form-select-sm example" name="idTipoD">
-							<option selected>Tipo de documento</option>
+							<option disabled >Tipo de documento</option>
 							<c:forEach var="tipodocumento" items="${tipos}">
-								<option value="${tipodocumento.idTipo}">${tipodocumento.tipoDocumento}</option>
+								<option selected value="${tipodocumento.idTipo}">${tipodocumento.tipoDocumento}</option>
 							</c:forEach>
 						</select>
 					</div>
@@ -123,6 +126,7 @@
 							<label >No. Documento</label> <input
 								name="noDocumento" class="input-text" type="text"
 								placeholder="Digita tu número de documento"
+								pattern="[0-9]+" required="" minlength="8" maxlength="10"
 								value="<c:out value='${cliente.noDocumento}' />" required>
 						</div>
 
@@ -132,7 +136,7 @@
 								class="input-text" name="genero">
 								<option value="<c:out value='${cliente.genero}' />">Género
 									al que perteneces</option>
-								<option value="femenino"">Femenino</option>
+								<option selected value="femenino"">Femenino</option>
 								<option value="masculino"">Masculino</option>
 							</select>
 						</div>
@@ -140,6 +144,7 @@
 						<div class="campo">
 							<label >Teléfono</label> <input name="telefono"
 								class="input-text" type="text" placeholder="Digita tu teléfono"
+								pattern="[0-9]+" required="" minlength="10" maxlength="10"
 								value="<c:out value='${cliente.telefono}' />" required>
 						</div>
 

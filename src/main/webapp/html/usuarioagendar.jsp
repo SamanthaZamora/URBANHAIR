@@ -151,7 +151,7 @@
 				</div>
 				<form class="formulario" action="../CitaServlet" method="post" style="text-align : center">
 				<h4 style ="text-align : center">Sr o Sra: <c:out value="${cliente.nombre}" /> </h4>
-				<h5 style ="text-align : center">*Seleccione el dï¿½a, la hora y el servicio que desea.*</h5> 
+				<h5 style ="text-align : center">*Seleccione el día, la hora y el servicio que desea.*</h5> 
 					<div class="row">
 						<div class="col-12 col-sm-6 col-md-6 col-lg-12"
 							style="padding-top: 0.5rem;">
@@ -174,10 +174,11 @@
 
 						<div class="col-12 col-sm-6 col-md-6 col-lg-12"
 							style="padding-left: 5rem;">
-							<p style="">Seleccione fecha y Hora:</p>
-							<input name="fecha" type="datetime-local" 
+							<p>Seleccione la fecha y hora :</p>
+							<input name="fecha" type="datetime-local"  min="2022-06-01" max="2022-12-31" required
 								style="background-color: rgb(214, 205, 205); width: 30rem; margin-right: 3rem">
 						</div>
+						
 						<div>
 							<input class="boton boton-contacto btn-registro w-sm-100 "
 								type="submit" value="Confirmar"   style="margin-right: 20rem"
