@@ -98,7 +98,7 @@
 							class="input-text" name="rol"  required>
 							<option value="0">Selecciona el tipo de usuario</option>
 							<option value="1">Administrador</option>
-							<option value="2">Cliente</option>
+							<option selected value="2">Cliente</option>
 						</select>
 					</div>
 

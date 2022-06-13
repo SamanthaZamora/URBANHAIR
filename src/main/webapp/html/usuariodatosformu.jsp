@@ -196,17 +196,18 @@
 							</div>
 
 							<div class="campo">
-								<label for="telefono">Telefono *</label> <input name="telefono"
+								<label for="telefono">Teléfono *</label> <input name="telefono"
 									class="input-text" type="text"
+									pattern="[0-9]+" required minlength="10" maxlength="10"
 									value="<c:out value='${cliente.telefono}' />" required>
 							</div>
 
 							<div class="campo">
-								<label for="genero">Genero *</label> <select name="genero"
+								<label for="genero">Género *</label> <select name="genero"
 									class="input-text">
 									<option value="<c:out value='${cliente.genero}' />">Genero
 										al que perteneces</option>
-									<option value="femenino"">Femenino</option>
+									<option value="femenino"" selected >Femenino</option>
 									<option value="masculino"">Masculino</option>
 								</select>
 							</div>
