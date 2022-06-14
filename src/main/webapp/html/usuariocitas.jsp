@@ -152,6 +152,7 @@
                                   <th class="enc" scope="col">Fecha</th>
                                   <th class="enc" scope="col">Hora Inicio</th>
                                   <th class="enc" scope="col">Duración (Minutos)</th>
+                                  <th class="enc" scope="col">Empleado</th>
                                   <th class="enc" scope="col">Acciones</th>
                               </tr>
                           </thead>
@@ -172,6 +173,7 @@
 								<td>${w.fecha} </td>
 								<td>${w.hora} </td>
 								<td>${w.servicio.duracion} </td>
+								<td>${w.empleado.nombre} </td>
 								<td>
                                       <a href="../CitaServlet?action=delete&id=${w.idCita}"  >Cancelar</a>
                                       

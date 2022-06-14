@@ -43,9 +43,13 @@ public class AtencionServicio implements Serializable {
 	private Persona persona;
 
 	
+	@ManyToOne
+	@JoinColumn(name="idEmpleado")
+	private Empleado empleado;
 	
 	
-	public AtencionServicio(Date fecha, String hora, float precio, Cita cita, Servicio servicio, Persona persona) {
+	
+	public AtencionServicio(Date fecha, String hora, float precio, Cita cita, Servicio servicio, Persona persona, Empleado empleado) {
 		super();
 		this.fecha = fecha;
 		this.hora = hora;
@@ -53,6 +57,7 @@ public class AtencionServicio implements Serializable {
 		this.cita = cita;
 		this.servicio = servicio;
 		this.persona = persona;
+		this.empleado=empleado;
 	}
 
 	public AtencionServicio() {
@@ -112,6 +117,14 @@ public class AtencionServicio implements Serializable {
 
 	public void setPersona(Persona persona) {
 		this.persona = persona;
+	}
+	
+	public Empleado getEmpleado() {
+		return this.empleado;
+	}
+
+	public void setEmpleado(Empleado empleado) {
+		this.empleado = empleado;
 	}
 
 }

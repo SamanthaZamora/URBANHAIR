@@ -1,12 +1,10 @@
 package co.urbanhair.controller;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalTime;
-import java.util.Date;
-import java.util.List;
+import co.urbanhair.dao.AtencionDAO;
+import co.urbanhair.dao.CitaDAO;
+import co.urbanhair.dao.EmpleadoDAO;
+import co.urbanhair.dao.ServicioDAO;
+import co.urbanhair.entities.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,19 +13,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import co.urbanhair.dao.AtencionDAO;
-import co.urbanhair.dao.CitaDAO;
-import co.urbanhair.dao.EmpleadoDAO;
-import co.urbanhair.dao.GenericDao;
-import co.urbanhair.dao.ServicioDAO;
-import co.urbanhair.entities.AtencionServicio;
-import co.urbanhair.entities.Cita;
-import co.urbanhair.entities.Empleado;
-import co.urbanhair.entities.Persona;
-import co.urbanhair.entities.Producto;
-import co.urbanhair.entities.Proveedor;
-import co.urbanhair.entities.Servicio;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Servlet implementation class CitaServlet
@@ -65,24 +56,24 @@ public class CitaServlet extends HttpServlet {
 
 		try {
 			switch (action) {
-			case "new":
-				showNewForm(request, response);
-				break;
-			case "insert":
-				insert(request, response);
-				break;
-			case "delete":
-				delete(request, response);
-				break;
-			case "edit":
-				showEditForm(request, response);
-				break;
-			case "update":
-				// update(request, response);
-				break;
-			default:
-				list(request, response);
-				break;
+				case "new":
+					showNewForm(request, response);
+					break;
+				case "insert":
+					insert(request, response);
+					break;
+				case "delete":
+					delete(request, response);
+					break;
+				case "edit":
+					showEditForm(request, response);
+					break;
+				case "update":
+					// update(request, response);
+					break;
+				default:
+					list(request, response);
+					break;
 			}
 		} catch (SQLException ex) {
 			throw new ServletException(ex);
@@ -119,10 +110,10 @@ public class CitaServlet extends HttpServlet {
 			throws ServletException, SQLException, IOException, ParseException {
 
 		String fecha = request.getParameter("fecha");
-		// int emp = Integer.parseInt(request.getParameter("empleado"));
+		int emp = Integer.parseInt(request.getParameter("empleado"));
 		int serv = Integer.parseInt(request.getParameter("servicio"));
 
-		System.out.println(fecha);
+
 		// response.sendRedirect(request.getContextPath() + "/html/usuarioagendar.jsp");
 		try {
 			System.out.println();
@@ -141,10 +132,12 @@ public class CitaServlet extends HttpServlet {
 			EmpleadoDAO empl = new EmpleadoDAO();
 			ServicioDAO se = new ServicioDAO();
 			Servicio servicial = se.find(serv);
-			// Empleado v = empl.find(emp);
+			Empleado v = empl.find(emp);
+			System.out.println(v.toString() + " - empleado ");
 
-			Cita cita2 = new Cita(fe, time, persona, servicial);
-			AtencionServicio as = new AtencionServicio(fe, time, servicial.getPrecio(), cita2, servicial, persona);
+			Cita cita2 = new Cita(fe, time, persona, servicial,v);
+			AtencionServicio as =
+					new AtencionServicio(fe, time, servicial.getPrecio(), cita2, servicial, persona,v);
 			cita.insert(cita2);
 			ate.insert(as);
 			response.sendRedirect(request.getContextPath() + "/html/usuariocitas.jsp");

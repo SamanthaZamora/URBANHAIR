@@ -170,6 +170,24 @@
 								</c:forEach>
 							</select>
 						</div>
+						
+						<div class="col-12 col-sm-6 col-md-6 col-lg-12"
+							style="padding-top: 0.5rem;">
+							<p>Seleccione el Empleado:</p>
+							<jsp:useBean id="em" class="co.urbanhair.dao.EmpleadoDAO">
+							</jsp:useBean>
+							<c:set var="x" scope="session" value="${em.list()}">
+							</c:set>
+							<select name="empleado"
+								style="background-color: rgb(214, 205, 205); width: 30rem;">
+								<option value="0">Aleatorio</option>
+
+								<c:forEach var="i" items="${x}">
+									<option value="${i.idEmpleado}"
+										style="background-color: rgb(241, 233, 233);">${i.nombre}</option>
+								</c:forEach>
+							</select>
+						</div>
 
 
 						<div class="col-12 col-sm-6 col-md-6 col-lg-12"
