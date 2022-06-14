@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.*;
+
+import lombok.ToString;
+
 import java.util.Date;
 import java.util.List;
 
@@ -12,6 +15,7 @@ import java.util.List;
  * The persistent class for the empleado database table.
  * 
  */
+@ToString
 @Entity
 @Table(name="empleado")
 @NamedQuery(name="Empleado.findAll", query="SELECT e FROM Empleado e")
