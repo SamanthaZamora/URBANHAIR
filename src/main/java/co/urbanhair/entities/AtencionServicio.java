@@ -118,5 +118,13 @@ public class AtencionServicio implements Serializable {
 	public void setPersona(Persona persona) {
 		this.persona = persona;
 	}
+	
+	public Empleado getEmpleado() {
+		return this.empleado;
+	}
+
+	public void setEmpleado(Empleado empleado) {
+		this.empleado = empleado;
+	}
 
 }
