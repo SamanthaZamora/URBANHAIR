@@ -135,7 +135,7 @@ public class CitaServlet extends HttpServlet {
 			Empleado v = empl.find(emp);
 			System.out.println(v.toString() + " - empleado ");
 
-			Cita cita2 = new Cita(fe, time, persona, servicial);
+			Cita cita2 = new Cita(fe, time, persona, servicial,v);
 			AtencionServicio as =
 					new AtencionServicio(fe, time, servicial.getPrecio(), cita2, servicial, persona,v);
 			cita.insert(cita2);

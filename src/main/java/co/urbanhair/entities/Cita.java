@@ -39,16 +39,22 @@ public class Cita implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="idServicio")
 	private Servicio servicio;
+	
+	//bi-directional many-to-one association to Servicio
+		@ManyToOne
+		@JoinColumn(name="idEmpleado")
+		private Empleado empleado;
 
 	public Cita() {
 	}
 	
-	public Cita(Date fecha, String hora,  Persona persona, Servicio servicio) {
+	public Cita(Date fecha, String hora,  Persona persona, Servicio servicio, Empleado empleado) {
 		super();
 		this.fecha = fecha;
 		this.hora = hora;
 		this.persona = persona;
 		this.servicio = servicio;
+		this.empleado= empleado;
 	}
 
 
@@ -113,5 +119,15 @@ public class Cita implements Serializable {
 	public void setServicio(Servicio servicio) {
 		this.servicio = servicio;
 	}
+
+	public Empleado getEmpleado() {
+		return empleado;
+	}
+
+	public void setEmpleado(Empleado empleado) {
+		this.empleado = empleado;
+	}
+	
+	
 
 }
