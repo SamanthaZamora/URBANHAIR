@@ -3,7 +3,6 @@
   <groupId>URBANSS</groupId>
   <artifactId>URBANSS</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
   <build>
     <resources>
       <resource>
