@@ -135,7 +135,7 @@
 
 	<div class="row nosotros-principal">
 		<div class="col-12 col-sm-6 col-md-6 col-lg-6 nosotros-colum-2">
-			<h1>Nuestra mision</h1/>
+			<h1>Nuestra misión</h1/>
 			<hr>
 			<p style="text-align: justify"> ${w.mision}</p>
 		</div>
@@ -156,7 +156,7 @@
 		</div>
 
 		<div class="col-12 col-sm-6 col-md-6 col-lg-6 nosotros-colum-2">
-			<h1>Nuestra vision</h1/>
+			<h1>Nuestra visión</h1/>
 			<hr>
 			<p style="text-align: justify">${w.vision} </p>
 		</div>

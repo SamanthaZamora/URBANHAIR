@@ -149,7 +149,7 @@
 					<h1>Agenda tu cita</h1>
 					<hr>
 				</div>
-				<form class="formulario" action="../CitaServlet" method="post" style="text-align : center">
+				<form class="formulario-agenda" action="../CitaServlet" method="post" style="text-align : center">
 				<h4 style ="text-align : center">Sr o Sra: <c:out value="${cliente.nombre}" /> </h4>
 				<h5 style ="text-align : center">*Seleccione el día, la hora y el servicio que desea.*</h5> 
 					<div class="row">
@@ -208,6 +208,8 @@
 			</div>
 		</div>
 	</div>
+	
+	
 
 
 	<footer class="footer header-decoracion" style="margin-top: 45px">

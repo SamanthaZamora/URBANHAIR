@@ -439,11 +439,19 @@ img{
     padding: 4rem;
     border-radius: 2rem;
     opacity: 0.8;
-    height: 95%;
-    
-
-    
+    height: 95%;   
 }
+
+.formulario-agenda{
+	background-color: var(--gris);
+    width: min(60rem, 100%); 
+    margin: 1rem auto; 
+    padding: 4rem;
+    border-radius: 2rem;
+    opacity: 0.8;
+	height: 42rem; 
+}
+
 
 .formulario fieldset {
     border: none;
