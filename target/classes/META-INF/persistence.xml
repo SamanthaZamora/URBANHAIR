@@ -18,11 +18,11 @@
 		
 		<properties>
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost:3306/urbanhair_bd" />
+				value="jdbc:mysql://bvs4ndhwzuqmbld5uyx5-mysql.services.clever-cloud.com:3306/bvs4ndhwzuqmbld5uyx5" />
 
-			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.user" value="unz4v4ardcmkvqpp" />
 
-			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="javax.persistence.jdbc.password" value="4S3sihKHTrGwIN3lPM6C" />
 
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
